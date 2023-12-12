@@ -1,38 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,900;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
+  position: relative;
   font-family: 'Roboto', sans-serif;
   color: #333;
-  background-color: #fff;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #EBF4E1;
 }
+
+
 main {
+  z-index: 1;
   background-color: #fcf5e5;
-  width: 320px; /* Adjusted width */
   text-align: center;
   border: 2px solid #444444;
   border-radius: 16px;
   box-shadow: 10px 10px #444444;
 }
+
 header {
-  width: 100%;
-  padding: 20px;
+  width: 300px;
+  height: 90px;
+  margin: 20px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  flex-direction: column;
   text-align: right;
 }
-.result {
+
+#display {
+  flex: 1;
+  color: #000;
+  /* min-width: 300px;
+  min-height: 50px; */
+  letter-spacing: 0.8px;
   font-size: 40px;
+  min-height: 70%;
   font-weight: 900;
 }
+
 .inputValues {
   font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1.8px;
+  flex: 2;
 }
+
 .Calculator {
   background-color: #b8f3d7;
   display: flex;
@@ -41,7 +65,9 @@ header {
   align-content: center;
   border-radius: 10px;
   padding-top: 40px;
+  font-weight: 400;
 }
+
 .button-row {
   display: flex;
   flex-direction: row;
@@ -50,6 +76,7 @@ header {
   min-width: 320px;
   padding: 10px 0 0 10px;
 }
+
 button {
   /* width: 100%; */
   min-width: 20%;
@@ -63,11 +90,13 @@ button {
   text-align: center;
   cursor: pointer;
 }
+
 .border {
   border: 1.5px solid #444444;
   border-radius: 11px;
   box-shadow: 3px 3px #444444;
 }
+
 .last-row {
   display: flex;
   align-items: center;
@@ -75,6 +104,19 @@ button {
   flex-direction: row;
   padding: 10px 0 0 10px;
 }
+
 .last-row .last-btn {
   width: 100%;
+}
+
+footer {
+  position: absolute;
+  z-index: 3;
+  left: 60%;
+  top: 96%;
+}
+
+p {
+  font-size: 10px;
+  font-weight: 300;
 }
